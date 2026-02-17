@@ -309,7 +309,22 @@ export default async function AdminMembersPage({ searchParams }: AdminMembersPag
                       </td>
                     </tr>
                   ) : (
-                    members.map((member, index) => (
+                    members.map((member: {
+                      id: string;
+                      name: string | null;
+                      email: string | null;
+                      phone: string | null;
+                      role: "ADMIN" | "MODERATOR" | "MEMBER";
+                      isVerified: boolean;
+                      createdAt: Date;
+                      alumni: {
+                        id: string;
+                        matricNo: string;
+                        department: string;
+                        graduationYear: number;
+                        status: "ACTIVE" | "SUSPENDED" | "INACTIVE";
+                      } | null;
+                    }, index: number) => (
                       <tr key={member.id} className={`border-b border-slate-100 align-middle transition hover:bg-indigo-50/40 ${index % 2 === 0 ? "bg-white" : "bg-slate-50/35"}`}>
                         <td className="sticky left-0 z-10 bg-inherit px-3 py-3 font-medium text-slate-900">
                           <div className="flex items-center gap-2">
