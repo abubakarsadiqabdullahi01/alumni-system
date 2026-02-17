@@ -108,13 +108,13 @@ export function LoginForm() {
         {isSubmitting ? "Signing in..." : "Login to GSU Alumni"}
       </Button>
 
-      <div className="rounded-xl border border-white/70 bg-white/70 p-3 text-xs text-slate-600">
-        <p className="font-semibold text-slate-800">Seeded Test Accounts</p>
-        <p className="mt-1">Admin: admin@gsu-alumni.local</p>
-        <p>Moderator: moderator@gsu-alumni.local</p>
-        <p>Member: member@gsu-alumni.local</p>
-        <p className="mt-1">Password: Password@123</p>
-      </div>
+      {/*<div className="rounded-xl border border-white/70 bg-white/70 p-3 text-xs text-slate-600">*/}
+      {/*  <p className="font-semibold text-slate-800">Seeded Test Accounts</p>*/}
+      {/*  <p className="mt-1">Admin: admin@gsu-alumni.local</p>*/}
+      {/*  <p>Moderator: moderator@gsu-alumni.local</p>*/}
+      {/*  <p>Member: member@gsu-alumni.local</p>*/}
+      {/*  <p className="mt-1">Password: Password@123</p>*/}
+      {/*</div>*/}
 
       <p className="text-center text-sm text-slate-600">
         New member?{" "}
