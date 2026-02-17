@@ -67,7 +67,17 @@ export async function GET(request: Request) {
   ].join(",");
 
   const body = rows
-    .map((row) =>
+    .map(
+      (row: {
+        matricNo: string;
+        department: string;
+        graduationYear: number;
+        currentCity: string | null;
+        employer: string | null;
+        jobTitle: string | null;
+        skills: string | null;
+        user: { name: string | null; email: string | null };
+      }) =>
       [
         escapeCsv(row.user.name),
         escapeCsv(row.user.email),
